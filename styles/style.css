@@ -1,0 +1,154 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.page {
+  min-inline-size: 360px;
+  margin: 0 auto;
+}
+
+p,
+h1,
+h2,
+h3,
+blockquote,
+ul,
+ol,
+li,
+figure {
+  margin: 0;
+}
+
+:root {
+  --bg-color: #F3EFEC;
+  --text-color: #312A4E;
+  --accent-color: #FFAB6B;
+  --main-font: Raleway;
+  --accent-font: 'STIX Two Text';
+}
+
+.page {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: var(Raleway);
+}
+
+.heading {
+  color: #312A4E;
+  font-family: var(--accent-color);
+  font-style: normal;
+  text-align: center;
+  font-weight: 600;
+  line-height: 90%;
+}
+
+.content-section {
+  padding-left: 5vi;
+  padding-right: 5vi;
+}
+
+.header__title {
+  font-size: clamp(3.75rem, 2.5rem + 5.5556vw, 7.5rem);
+  margin-bottom: 40px;
+  padding-top: 10%;
+}
+
+.content__title {
+  font-size: 30px;
+  margin-top: 7%;
+  margin-bottom: 2.5%;
+}
+
+.content__text-block{
+  font-size: 18px;
+  color: #312A4E;
+  font-family: var(--main-font);
+  font-weight: 400;
+  display: flex;
+  flex-direction: column;
+}
+
+.content__text-block .content__paragraph:not(:last-child) {
+  margin-bottom: 1.5em;
+}
+
+.content__link {
+  color: inherit;
+  text-underline-offset: 2px;
+}
+
+.content__blockquote {
+  align-self: center;
+  width: 75%;
+  margin-bottom: 1.5em;
+  font-style: italic;
+  font-weight: 400;
+  line-height: 200%;
+}
+
+.content__list {
+  list-style: none;
+  color: #312A4E;
+  font-family: var(--main-font);
+  font-size: 18px;
+  font-weight: 400;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.content__list li::before{
+  content: " ";
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  background-image: url(../images/marker-light.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-right: 5px;
+  margin-top: 2px;
+}
+
+.content__text-block_type_first-lettered .content__paragraph:first-child::first-letter {
+  background-color: var(--accent-color);
+  color: #312A4E;
+  font-size: 30px;
+  font-weight: 700;
+  letter-spacing: 9px;
+  padding-left: 4px;
+  padding-right: 4px;
+  margin-right: 1px;
+}
+
+.content__picture {
+  inline-size: 100%;
+}
+
+.content__figure {
+  position: relative;
+  margin: 7% auto;
+  inline-size: calc(100% + 10vi);
+  inset-inline-end: 5vi;
+}
+
+.content__picture-caption {
+  text-align: center;
+  padding: 20px;
+  font-size: 18px;
+  border-block-end: 1px solid currentColor;
+}
+
+
+
+
+
+
+
+
+
+
+
+
