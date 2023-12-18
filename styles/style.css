@@ -32,11 +32,11 @@ figure {
 .page {
   background-color: var(--bg-color);
   color: var(--text-color);
-  font-family: var(Raleway);
+  font-family: var(--main-font);
 }
 
 .heading {
-  color: #312A4E;
+  color: var(--text-color);
   font-family: var(--accent-color);
   font-style: normal;
   text-align: center;
@@ -63,7 +63,7 @@ figure {
 
 .content__text-block{
   font-size: 18px;
-  color: #312A4E;
+  color: var(--text-color);
   font-family: var(--main-font);
   font-weight: 400;
   display: flex;
@@ -90,7 +90,7 @@ figure {
 
 .content__list {
   list-style: none;
-  color: #312A4E;
+  color: var(--text-color);
   font-family: var(--main-font);
   font-size: 18px;
   font-weight: 400;
@@ -114,7 +114,7 @@ figure {
 
 .content__text-block_type_first-lettered .content__paragraph:first-child::first-letter {
   background-color: var(--accent-color);
-  color: #312A4E;
+  color: var(--text-color);
   font-size: 30px;
   font-weight: 700;
   letter-spacing: 9px;
@@ -140,6 +140,148 @@ figure {
   font-size: 18px;
   border-block-end: 1px solid currentColor;
 }
+
+.content__card {
+  aspect-ratio: 4 / 3;
+  margin-top: 7%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid currentColor;
+}
+
+.content__card-title {
+  font-size: 60px;
+  padding-bottom: 4px;
+}
+
+.colored-text {
+  position: relative;
+  display: inline-block;
+  z-index: 1;
+}
+
+.colored-text::after {
+  content: " ";
+  position: absolute;
+  z-index: -1;
+  inline-size: calc(100% + 8px);
+  block-size: 0.5ch;
+  background-color: var(--accent-color);
+  inset-block-end: 0.05ch;
+  inset-inline-start: -4px;
+}
+
+.content__card-subtitle {
+  color: var(--text-color);
+  font-family: var(--main-font);
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.header__menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-block-start: 1px solid currentColor;
+  border-block-end: 1px solid currentColor;
+  padding-block: 20px;
+}
+
+.eader__theme-toggler {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+}
+
+.header__theme-button {
+  color: var(--text-color);
+  font-family: var(--main-font);
+  padding: 0;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 104%;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.header__theme-button_type_dark:hover {
+  text-decoration: underline;
+}
+
+.header__theme-button_type_dark:focus {
+  outline: none;
+}
+
+.header__theme-button_type_dark:focus-visible {
+  border: 1px solid var(--text-color);
+}
+
+.header__theme-button_type_light:hover {
+  text-decoration: underline;
+}
+
+.header__theme-button_is-active {
+  font-weight: 700;
+  position: relative;
+}
+
+.header__theme-button_is-active::after {
+  content: " ";
+  position: absolute;
+  z-index: -1;
+  inline-size: calc(100% + 8px);
+  block-size: 0.5ch;
+  background-color: var(--accent-color);
+  inset-block-end: 0.05ch;
+  inset-inline-start: -4px;
+}
+
+.footer {
+  margin-top: 10%;
+  padding: 2.5% 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-block-start: 1px solid var(--text-color);
+}
+
+.footer__copyright {
+  color: var(--text-color);
+  font-family: inherit;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.theme_dark {
+  --bg-color: #171717;
+  --text-color: #B3B3B3;
+  --accent-color: transparent;
+}
+
+.theme_dark .colored-text::after {
+  background-image: url(../images/pattern.svg);
+}
+
+.theme_dark .header__theme-button_is-active::after {
+  background-image: url(../images/pattern.svg);
+}
+
+.theme_dark .content__text-block_type_first-lettered .content__paragraph:first-child::first-letter {
+  border: 1px solid currentColor;
+}
+
+.theme_dark .content__list li::before {
+  background-image: url(../images/marker-dark.svg);
+}
+
+
+
+
+
 
 
 
